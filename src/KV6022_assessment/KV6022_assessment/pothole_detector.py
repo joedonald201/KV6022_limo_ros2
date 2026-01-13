@@ -125,6 +125,7 @@ class PotholeDetector(Node):
                     'bbox_h': int(bbox_h),
                 }
                 self.pothole_records.append(record)
+                print(f'Total potholes detected: {self.pothole_count}')
 
                 print(f'--- pothole {num} ---')
                 print('image coords: ', image_coords)
