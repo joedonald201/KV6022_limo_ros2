@@ -87,17 +87,17 @@ def main():
     goal_pose3.pose = pose_from_xytheta(0.9, 0.0, 0.0)
     goal_poses.append(goal_pose3)
 
-    goal_pose4a = PoseStamped()
-    goal_pose4a.header.frame_id = 'map'
-    goal_pose4a.header.stamp = navigator.get_clock().now().to_msg()
-    goal_pose4a.pose = pose_from_xytheta(-0.3, 3.0, 3.14)
-    goal_poses.append(goal_pose4a)
+    goal_pose4 = PoseStamped()
+    goal_pose4.header.frame_id = 'map'
+    goal_pose4.header.stamp = navigator.get_clock().now().to_msg()
+    goal_pose4.pose = pose_from_xytheta(1.1, 0.0, 0.0)
+    goal_poses.append(goal_pose4)
 
-    goal_pose5a = PoseStamped()
-    goal_pose5a.header.frame_id = 'map'
-    goal_pose5a.header.stamp = navigator.get_clock().now().to_msg()
-    goal_pose5a.pose = pose_from_xytheta(-0.5, 3.5, 3.14)
-    goal_poses.append(goal_pose5a)
+    goal_pose5 = PoseStamped()
+    goal_pose5.header.frame_id = 'map'
+    goal_pose5.header.stamp = navigator.get_clock().now().to_msg()
+    goal_pose5.pose = pose_from_xytheta(1.3, 0.0, 0.0)
+    goal_poses.append(goal_pose5)
 
     # sanity check a valid path exists
     # path = navigator.getPath(initial_pose, goal_pose1)
