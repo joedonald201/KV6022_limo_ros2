@@ -70,6 +70,7 @@ def main():
 
     waypoint_specs = [
         (1.00, -0.10, 0.0),
+        (1.10, -0.30, 0.0),
     ]
     for x, y, theta in waypoint_specs:
         goal_pose = PoseStamped()
