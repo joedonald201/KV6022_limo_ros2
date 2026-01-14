@@ -68,24 +68,29 @@ def main():
     # set our demo's goal poses to follow
     goal_poses = []
 
-    goal_pose1 = PoseStamped()
-    goal_pose1.header.frame_id = 'map'
-    goal_pose1.header.stamp = navigator.get_clock().now().to_msg()
-    goal_pose1.pose = pose_from_xytheta(0.5, 0.0, 0.0)
-    goal_poses.append(goal_pose1)
-
-    # additional goals can be appended
-    goal_pose2 = PoseStamped()
-    goal_pose2.header.frame_id = 'map'
-    goal_pose2.header.stamp = navigator.get_clock().now().to_msg()
-    goal_pose2.pose = pose_from_xytheta(0.7, 0.0, 0.0)
-    goal_poses.append(goal_pose2)
-    
-    goal_pose3 = PoseStamped()
-    goal_pose3.header.frame_id = 'map'
-    goal_pose3.header.stamp = navigator.get_clock().now().to_msg()
-    goal_pose3.pose = pose_from_xytheta(0.9, 0.0, 0.0)
-    goal_poses.append(goal_pose3)
+    waypoint_specs = [
+        (2.0, 0.0, 0.0),
+        (4.0, 0.0, 0.0),
+        (5.0, 0.5, 0.79),
+        (5.0, 1.5, 1.57),
+        (5.0, 2.5, 1.57),
+        (5.0, 3.5, 1.57),
+        (4.5, 4.0, 2.36),
+        (3.5, 4.0, 3.14),
+        (2.0, 4.0, 3.14),
+        (1.0, 4.0, 3.14),
+        (0.5, 3.5, -2.36),
+        (0.0, 2.5, -1.57),
+        (0.0, 1.5, -1.57),
+        (0.5, 0.5, -0.79),
+        (0.65, -0.06, 0.0),
+    ]
+    for x, y, theta in waypoint_specs:
+        goal_pose = PoseStamped()
+        goal_pose.header.frame_id = 'map'
+        goal_pose.header.stamp = navigator.get_clock().now().to_msg()
+        goal_pose.pose = pose_from_xytheta(x, y, theta)
+        goal_poses.append(goal_pose)
 
     # sanity check a valid path exists
     # path = navigator.getPath(initial_pose, goal_pose1)
@@ -117,7 +122,7 @@ def main():
                 goal_pose4 = PoseStamped()
                 goal_pose4.header.frame_id = 'map'
                 goal_pose4.header.stamp = now.to_msg()
-                goal_pose4.pose = pose_from_xytheta(0.11, 0.0, 0.0)
+                goal_pose4.pose = pose_from_xytheta(-1.0, 0.0, -1.57)
                 goal_poses = [goal_pose4]
                 nav_start = now
                 follow_waypoints_task = navigator.followWaypoints(goal_poses)
