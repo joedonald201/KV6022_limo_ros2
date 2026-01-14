@@ -71,20 +71,20 @@ def main():
     goal_pose1 = PoseStamped()
     goal_pose1.header.frame_id = 'map'
     goal_pose1.header.stamp = navigator.get_clock().now().to_msg()
-    goal_pose1.pose = pose_from_xytheta(4.0, 0.0, 0.0)
+    goal_pose1.pose = pose_from_xytheta(1.5, 0.0, 0.0)
     goal_poses.append(goal_pose1)
 
     # additional goals can be appended
     goal_pose2 = PoseStamped()
     goal_pose2.header.frame_id = 'map'
     goal_pose2.header.stamp = navigator.get_clock().now().to_msg()
-    goal_pose2.pose = pose_from_xytheta(0.7, 0.0, 0.0)
+    goal_pose2.pose = pose_from_xytheta(3.0, 0.0, 0.0)
     goal_poses.append(goal_pose2)
     
     goal_pose3 = PoseStamped()
     goal_pose3.header.frame_id = 'map'
     goal_pose3.header.stamp = navigator.get_clock().now().to_msg()
-    goal_pose3.pose = pose_from_xytheta(0.9, 0.0, 0.0)
+    goal_pose3.pose = pose_from_xytheta(4.5, 0.0, 0.0)
     goal_poses.append(goal_pose3)
 
     # sanity check a valid path exists
@@ -117,7 +117,7 @@ def main():
                 goal_pose4 = PoseStamped()
                 goal_pose4.header.frame_id = 'map'
                 goal_pose4.header.stamp = now.to_msg()
-                goal_pose4.pose = pose_from_xytheta(0.11, 0.0, 0.0)
+                goal_pose4.pose = pose_from_xytheta(6.0, 0.0, 0.0)
                 goal_poses = [goal_pose4]
                 nav_start = now
                 follow_waypoints_task = navigator.followWaypoints(goal_poses)
