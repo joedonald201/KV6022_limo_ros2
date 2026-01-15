@@ -110,14 +110,6 @@ def main():
                 navigator.cancelTask()
 
             # Some follow waypoints request change to demo preemption
-            if now - nav_start > Duration(seconds=35.0):
-                goal_pose4 = PoseStamped()
-                goal_pose4.header.frame_id = 'map'
-                goal_pose4.header.stamp = now.to_msg()
-                goal_pose4.pose = pose_from_xytheta(0.11, 0.0, 0.0)
-                goal_poses = [goal_pose4]
-                nav_start = now
-                follow_waypoints_task = navigator.followWaypoints(goal_poses)
 
     # Do something depending on the return code
     result = navigator.getResult()
