@@ -79,6 +79,7 @@ def main():
         (-0.864, -0.928, 3.14),
         (-0.864, -0.928, -1.57),
         (-0.873, 0.072, -1.57),
+        (0.107, 0.589, 0.0),
     ]
     for x, y, theta in waypoint_specs:
         goal_pose = PoseStamped()
