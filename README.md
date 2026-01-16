@@ -97,12 +97,22 @@ Contains detected pothole data with columns:
 - `area`: Pothole area (pixels)
 - `bbox_w`: Bounding box width (pixels)
 - `bbox_h`: Bounding box height (pixels)
+Saved to the current working directory when the detector runs.
+View in terminal:
+```bash
+cat potholes.csv
+```
 
 #### JSON File (`potholes.json`)
 Structured data in JSON format with same information as CSV.
+Saved to the current working directory when the detector runs.
+View in terminal:
+```bash
+cat potholes.json
+```
 
 #### Visualisation
-- **RViz**: Real-time RViz pose markers showing detected pothole locations
+- **RViz**: Red pose markers show pothole positions on map.
 - **OpenCV Windows**: Real-time detection with contours and bounding boxes.
 - **Terminal Output**: Live count and coordinates.
 
