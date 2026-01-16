@@ -114,7 +114,10 @@ cat potholes.json
 #### Visualisation
 - **RViz**: Red pose markers show pothole positions on map.
 - **OpenCV Windows**: Real-time detection with contours and bounding boxes.
-- **Terminal Output**: Live count and coordinates.
+- **Terminal Output**: Live count and coordinates. View in the detector terminal:
+```bash
+python3 src/KV6022_assessment/KV6022_assessment/pothole_detector.py
+```
 
 ### Detection Parameters
 ```python
