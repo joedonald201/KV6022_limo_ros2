@@ -138,10 +138,10 @@ Live visualisation in RViz
 ROS2 native implementation
 
 ## Author
--Joe Donald
--Student ID: 22024499
--Module: KV6022 Robotics & Automation
--Date: 16 Jan 2026
+- Joe Donald
+- Student ID: 22024499
+- Module: KV6022 Robotics & Automation
+- Date: 16 Jan 2026
 
 
 
