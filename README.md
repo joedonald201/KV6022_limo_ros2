@@ -50,7 +50,7 @@ python3 src/KV6022_assessment/KV6022_assessment/pothole_detector.py
 #### Terminal 4: Autonomous Navigation
 cd ~/KV6022_limo_ros2
 source install/setup.bash
-# Set initial pose in RViz
+#### Set initial pose in RViz
 Then run waypoint follower:
 ros2 run KV6022_assessment example_waypoint_follower
 
@@ -113,6 +113,36 @@ MIN_AREA = 100
 
 ### Navigation Parameters
 
-- **Waypoints
+- **Waypoints: 8 Points covering track perimeter
+
+## Limitations
+
+### Duplicate Detections
+- Same pothole detected multiple times as robot passes by
+- Each camera frame generates new detection
+
+### Localisation Dependency
+- Requires manual 2D pose estimate in RViz after each gazebo reset
+
+### Performance
+- RViz can become unresponsive with 1000+ markers
+
+## Key Features
+
+Fully autonomous operation
+Real-time pothole detection using computer vision
+3D localisation with depth camera integration
+Map-based position reporting
+Persistent data storage
+Live visualisation in RViz
+ROS2 native implementation
+
+## Author
+Joe Donald
+Student ID: 22024499
+Module: KV6022 Robotics & Automation
+Date: 16 Jan 2026
+
+
 
 
