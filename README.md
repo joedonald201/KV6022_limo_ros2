@@ -102,7 +102,7 @@ Contains detected pothole data with columns:
 Structured data in JSON format with same information as CSV.
 
 #### Visualisation
-- **RViz**: Red pose markers show pothole positions on map.
+- **RViz**: Real-time RViz pose markers showing detected pothole locations
 - **OpenCV Windows**: Real-time detection with contours and bounding boxes.
 - **Terminal Output**: Live count and coordinates.
 
